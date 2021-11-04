@@ -460,6 +460,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 663047485136945982, guid: 3a3042b40a683a34782b994a2e11a1dc, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 553.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 663047485136945983, guid: 3a3042b40a683a34782b994a2e11a1dc, type: 3}
+      propertyPath: m_Text
+      value: 'LMB: Set Start
+
+        RMB: Set Goal
+
+        Q: Make Plains
+
+        W:
+        Make Wood
+
+        E: Make Wall
+
+        F: Spawn Agent
+
+        Space: 
+        Coords
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 663047486233952251, guid: 3a3042b40a683a34782b994a2e11a1dc, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -619
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a3042b40a683a34782b994a2e11a1dc, type: 3}
 --- !u!1 &1831574743
@@ -537,3 +565,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _pathfinding: {fileID: 1831574746}
   _mapGenerator: {fileID: 1831574744}
+  _playerAgentPrefab: {fileID: 1429419887474910, guid: c1a6213308e9d2a44bce4d03a2b8b6b4, type: 3}

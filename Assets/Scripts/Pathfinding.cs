@@ -143,7 +143,7 @@ public class Pathfinding : MonoBehaviour
                     if (neighbor._TileType != Tile.TileType.Wall)
                     {
                         costToReachTile[neighbor] = newCost;
-                        int priority = newCost + Distance(start, neighbor);//Also use the Distance for the priority so we need to check fewer Tiles
+                        int priority = newCost + Distance(neighbor, start);
                         frontier.Enqueue(neighbor, priority);
                         NextTileToGoal[neighbor] = curTile;
                         neighbor._Text = costToReachTile[neighbor].ToString();
@@ -190,6 +190,12 @@ public class Pathfinding : MonoBehaviour
         return null;
     }
 
+
+
+
+
+
+
     /// <summary>
     /// Determines the Manhatten Distance between two tiles. (=How many Tiles the player must move to reach it)
     /// </summary>
@@ -198,6 +204,19 @@ public class Pathfinding : MonoBehaviour
     {
         return Mathf.Abs(t1._X - t2._X) + Mathf.Abs(t1._Y - t2._Y);
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     #region unimportant

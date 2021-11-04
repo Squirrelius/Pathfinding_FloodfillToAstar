@@ -6,9 +6,11 @@ public class PathTester : MonoBehaviour
 {
     public Pathfinding _pathfinding;
     public MapGenerator _mapGenerator;
+    public GameObject _playerAgentPrefab;
 
     private Tile _startTile;
     private Tile _endTile;
+    private Agent _agent;
 
     private void Start()
     {
@@ -111,6 +113,17 @@ public class PathTester : MonoBehaviour
 
         if (Input.GetKeyUp(KeyCode.Space))
             RepaintMap();
+
+        if(Input.GetKeyDown(KeyCode.F))
+        {
+            if (_agent == null)
+                _agent = Instantiate(_playerAgentPrefab, _startTile.transform.position, Quaternion.identity).GetComponent<Agent>();
+            else
+                _agent.transform.position = _startTile.transform.position;
+
+            Queue<Tile> path = _pathfinding.FindPath(_startTile, _endTile);
+            _agent.SetPath(path);
+        }
     }
 
     private Tile GetTileUnderMouse()
